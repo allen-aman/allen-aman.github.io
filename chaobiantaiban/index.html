@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超变态版传奇-经典复古高爆率传奇私服推荐与攻略</title>
+    <meta name="description" content="超变态版传奇提供最新、最火爆的传奇私服游戏推荐。包含复古传奇、1.76金币版、高爆率单职业等版本，提供下载地址、职业攻略、BOSS攻略及玩家社区交流。">
+    <meta name="keywords" content="超变态版传奇,传奇私服,传奇下载,复古传奇,1.76金币版,高爆率传奇,热血传奇">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-gold: #f1c40f;
+            --primary-gold-dark: #d4ac0d;
+            --bg-dark: #1a1a1a;
+            --bg-card: #2b2b2b;
+            --text-main: #ffffff;
+            --text-muted: #b0b0b0;
+            --accent-red: #e74c3c;
+            --border-radius: 4px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", "Heiti SC", sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: var(--primary-gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-red);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(0, 0, 0, 0.9);
+            border-bottom: 2px solid var(--primary-gold-dark);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-gold);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+            font-size: 16px;
+            font-weight: normal;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            font-size: 16px;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: var(--border-radius);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-gold);
+            background-color: rgba(241, 196, 15, 0.1);
+        }
+
+        .btn-download {
+            background-color: var(--accent-red);
+            color: white;
+            padding: 8px 20px;
+            border-radius: var(--border-radius);
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .btn-download:hover {
+            background-color: #c0392b;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://picsum.photos/seed/legendary/1920/600') no-repeat center center/cover;
+            height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(241, 196, 15, 0.5);
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #ddd;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-tags {
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            background-color: rgba(231, 76, 60, 0.8);
+            padding: 4px 10px;
+            border-radius: 3px;
+            font-size: 12px;
+            margin: 0 5px;
+        }
+
+        /* Server List */
+        .server-list {
+            padding: 50px 0;
+        }
+
+        .server-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .server-card {
+            background-color: var(--bg-card);
+            border: 1px solid #333;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .server-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            border-color: var(--primary-gold-dark);
+        }
+
+        .server-image {
+            height: 180px;
+            background-color: #000;
+            position: relative;
+        }
+
+        .server-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+
+        .server-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--accent-red);
+            color: white;
+            padding: 2px 8px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 2px;
+        }
+
+        .server-info {
+            padding: 20px;
+        }
+
+        .server-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .server-stats {
+            display: flex;
+            gap: 15px;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .stat-item strong {
+            color: var(--primary-gold);
+        }
+
+        .server-desc {
+            font-size: 14px;
+            color: #aaa;
+            margin-bottom: 20px;
+            height: 42px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        .server-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            border-radius: var(--border-radius);
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-gold);
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-gold-dark);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--primary-gold);
+            color: var(--primary-gold);
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(241, 196, 15, 0.1);
+        }
+
+        /* Features */
+        .features {
+            background-color: #222;
+            padding: 60px 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: var(--primary-gold);
+        }
+
+        .feature-item h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .feature-item p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        /* Guide Section */
+        .guide-section {
+            padding: 60px 0;
+        }
+
+        .guide-container {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .guide-content {
+            flex: 2;
+        }
+
+        .guide-sidebar {
+            flex: 1;
+            background-color: var(--bg-card);
+            padding: 20px;
+            border-radius: var(--border-radius);
+        }
+
+        .guide-list li {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 15px;
+        }
+
+        .guide-list li:last-child {
+            border-bottom: none;
+        }
+
+        .guide-list h4 {
+            color: var(--primary-gold);
+            margin-bottom: 5px;
+        }
+
+        .guide-list p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            padding: 50px 0 20px;
+            border-top: 1px solid #333;
+            margin-top: 50px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--text-main);
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-gold);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #222;
+            color: #555;
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .guide-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                ⚔️ <span>传奇世界</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#servers">新服推荐</a></li>
+                    <li><a href="#features">特色</a></li>
+                    <li><a href="#guide">攻略</a></li>
+                    <li><a href="#community">社区</a></li>
+                </ul>
+            </nav>
+            <a href="#download" class="btn-download">立即下载</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>超变态版传奇</h1>
+                <div class="hero-tags">
+                    <span class="tag">1.76复古</span>
+                    <span class="tag">百倍爆率</span>
+                    <span class="tag">满攻速</span>
+                </div>
+                <p>告别枯燥练级，回归兄弟激情。今日上线送神装，一键挂机，轻松称霸沙巴克。体验最纯粹的PK快感，重温热血岁月。</p>
+                <a href="#servers" class="btn btn-primary" style="padding: 12px 40px; font-size: 18px;">浏览服务器</a>
+            </div>
+        </section>
+
+        <!-- Server List Section -->
+        <section id="servers" class="server-list">
+            <div class="container">
+                <h2 class="section-title">热门变态服务器</h2>
+                <div class="server-grid">
+                    <!-- Server 1 -->
+                    <article class="server-card">
+                        <div class="server-image">
+                            <span class="server-badge">开服中</span>
+                            <img src="https://picsum.photos/seed/legend1/400/300" alt="复古1.76">
+                        </div>
+                        <div class="server-info">
+                            <div class="server-name">
+                                <span>【神装】1.76复古传奇</span>
+                            </div>
+                            <div class="server-stats">
+                                <span class="stat-item">爆率: <strong>100%</strong></span>
+                                <span class="stat-item">人数: <strong>12,000+</strong></span>
+                                <span class="stat-item">区服: <strong>一区</strong></span>
+                            </div>
+                            <p class="server-desc">经典1.76复古版本，全服爆率提升百倍，装备全靠打，上线即送VIP10，每日送极品神装，一键回收升级，平民玩家的天堂。</p>
+                            <div class="server-actions">
+                                <button class="btn btn-primary" onclick="alert('正在跳转至下载页面...')">立即进入</button>
+                                <button class="btn btn-outline">收藏</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Server 2 -->
+                    <article class="server-card">
+                        <div class="server-image">
+                            <span class="server-badge">即将开启</span>
+                            <img src="https://picsum.photos/seed/legend2/400/300" alt="单职业">
+                        </div>
+                        <div class="server-info">
+                            <div class="server-name">
+                                <span>【高爆】战神单职业</span>
+                            </div>
+                            <div class="server-stats">
+                                <span class="stat-item">爆率: <strong>50%</strong></span>
+                                <span class="stat-item">人数: <strong>8,500+</strong></span>
+                                <span class="stat-item">区服: <strong>二区</strong></span>
+                            </div>
+                            <p class="server-desc">极致爽快的单职业体验，技能无限释放，攻速提升200%。专注PK，打造极致输出，挑战全服最高BOSS，赢取唯一至尊称号。</p>
+                            <div class="server-actions">
+                                <button class="btn btn-primary" onclick="alert('正在跳转至下载页面...')">立即进入</button>
+                                <button class="btn btn-outline">收藏</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Server 3 -->
+                    <article class="server-card">
+                        <div class="server-image">
+                            <span class="server-badge">开服中</span>
+                            <img src="https://picsum.photos/seed/legend3/400/300" alt="合击">
+                        </div>
+                        <div class="server-info">
+                            <div class="server-name">
+                                <span>【合击】火龙传世</span>
+                            </div>
+                            <div class="server-stats">
+                                <span class="stat-item">爆率: <strong>80%</strong></span>
+                                <span class="stat-item">人数: <strong>15,000+</strong></span>
+                                <span class="stat-item">区服: <strong>三区</strong></span>
+                            </div>
+                            <p class="server-desc">英雄合击版本，兄弟齐心，其利断金。独创自动回收系统，省时省力。全服赠送元宝，每日登陆送稀有材料，打造专属神装。</p>
+                            <div class="server-actions">
+                                <button class="btn btn-primary" onclick="alert('正在跳转至下载页面...')">立即进入</button>
+                                <button class="btn btn-outline">收藏</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <h2 class="section-title">为什么选择我们</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>安全稳定</h3>
+                        <p>自主研发服务器架构，防DDOS攻击，保障玩家数据安全，无封号风险。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">⚡</div>
+                        <h3>极致体验</h3>
+                        <p>超变态爆率设定，告别漫长练级，快速获得顶级装备，享受碾压快感。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🎁</div>
+                        <h3>福利丰富</h3>
+                        <p>每日签到、在线奖励、上线大礼包，新手玩家福利多多，轻松起步。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">👥</div>
+                        <h3>兄弟相聚</h3>
+                        <p>老玩家回归，兄弟组队，攻沙争霸，重温当年的热血与激情。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide" class="guide-section">
+            <div class="container">
+                <h2 class="section-title">新手进阶指南</h2>
+                <div class="guide-container">
+                    <div class="guide-content">
+                        <article>
+                            <h3 style="margin-bottom: 15px; color: #fff;">如何选择适合的版本？</h3>
+                            <p style="margin-bottom: 20px; color: #ccc;">传奇私服版本众多，新手玩家在选择时需注意以下几点：</p>
+                            <ul style="list-style-type: disc; padding-left: 20px; color: #bbb; line-height: 1.8;">
+                                <li><strong>看爆率：</strong>普通版爆率极低，超变态版爆率通常在50%-100%之间。喜欢打宝的玩家建议选择高爆率版本。</li>
+                                <li><strong>看职业：</strong>单职业版本适合喜欢PK、追求极致输出的玩家；双职业或三职业适合喜欢操作和策略的玩家。</li>
+                                <li><strong>看运营：</strong>选择运营时间长、口碑好的私服，避免遇到跑路或数据丢失的风险。</li>
+                            </ul>
+                        </article>
+                        <article style="margin-top: 40px;">
+                            <h3 style="margin-bottom: 15px; color: #fff;">新手快速升级技巧</h3>
+                            <p style="margin-bottom: 15px; color: #ccc;">在超变态版传奇中，升级不再是难题，但掌握技巧能让你更快：</p>
+                            <ul style="list-style-type: disc; padding-left: 20px; color: #bbb; line-height: 1.8;">
+                                <li><strong>利用经验球：</strong>活动期间多领取经验球，挂机也能快速升级。</li>
+                                <li><strong>组队刷怪：</strong>与好友组队开启双倍经验，效率提升数倍。</li>
+                                <li><strong>关注主线：</strong>优先完成主线任务，解锁更多功能和新地图。</li>
+                            </ul>
+                        </article>
+                    </div>
+                    <aside class="guide-sidebar">
+                        <h4 style="margin-bottom: 20px; border-left: 3px solid var(--primary-gold); padding-left: 10px;">热门攻略目录</h4>
+                        <ul class="guide-list">
+                            <li>
+                                <a href="#"><h4>沙巴克攻城战规则</h4></a>
+                                <p>攻城时间与奖励详解</p>
+                            </li>
+                            <li>
+                                <a href="#"><h4>BOSS刷新点大全</h4></a>
+                                <p>世界BOSS与精英怪位置</p>
+                            </li>
+                            <li>
+                                <a href="#"><h4>装备合成公式</h4></a>
+                                <p>如何打造极品神装</p>
+                            </li>
+                            <li>
+                                <a href="#"><h4>元宝获取途径</h4></a>
+                                <p>除了充值还能怎么玩</p>
+                            </li>
+                            <li>
+                                <a href="#"><h4>PK技巧与防抓捕</h4></a>
+                                <p>野外PK生存指南</p>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="color: #666; font-size: 14px; line-height: 1.8;">
+                        本站致力于提供最优质的超变态版传奇游戏体验。我们拥有专业的技术团队和运营团队，确保每一款私服的安全、稳定与公平。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">游戏下载</a></li>
+                        <li><a href="#">新服列表</a></li>
+                        <li><a href="#">游戏公告</a></li>
+                        <li><a href="#">充值中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>玩家支持</h4>
+                    <ul>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">客服联系</a></li>
+                        <li><a href="#">玩家反馈</a></li>
+                        <li><a href="#">举报中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <p style="color: #666; font-size: 14px; margin-bottom: 10px;">获取最新开服信息与活动福利</p>
+                    <div style="display: flex; gap: 10px;">
+                        <div style="width: 40px; height: 40px; background: #333; border-radius: 4px;"></div>
+                        <div style="width: 40px; height: 40px; background: #333; border-radius: 4px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 超变态版传奇私服网 版权所有. 仅供娱乐交流使用.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+                          </html>
