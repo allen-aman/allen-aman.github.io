@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pk10杀号 - 专业数据工具与辅助分析平台，提供精准号码走势图、冷热号分析及历史开奖数据查询，帮助用户理性参考，辅助决策。">
+    <meta name="keywords" content="pk10杀号, pk10走势图, pk10历史数据, pk10杀号技巧, 11选5走势">
+    <title>pk10杀号 - 专业数据查询与辅助分析平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #f59e0b;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-sub: #64748b;
+            --border-color: #e2e8f0;
+            --radius: 8px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-sub);
+            transition: color 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--border-color);
+            background-color: transparent;
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        /* Main Layout */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: var(--radius);
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-sub);
+            font-size: 0.9rem;
+        }
+
+        /* Chart Section */
+        .chart-section {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .chart-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .chart-number {
+            width: 100%;
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            transition: all 0.2s;
+        }
+
+        .chart-column:hover .chart-number {
+            background-color: #e0e7ff;
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .chart-column.active .chart-number {
+            background-color: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+            font-size: 1.1rem;
+        }
+
+        .chart-column.history .chart-number {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .chart-label {
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+            color: var(--text-sub);
+        }
+
+        /* Analysis List */
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .analysis-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .analysis-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .card-image {
+            height: 160px;
+            background-color: #cbd5e1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+        }
+
+        .card-content {
+            padding: 1.25rem;
+        }
+
+        .card-tag {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            background-color: #eff6ff;
+            color: var(--primary-color);
+            font-size: 0.75rem;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-text {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            margin-bottom: 1rem;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .guide-steps {
+            counter-reset: step;
+        }
+
+        .guide-step {
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .guide-step::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2rem;
+            height: 2rem;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        .guide-step h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .guide-step p {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e293b;
+            color: #94a3b8;
+            padding: 3rem 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .disclaimer {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #334155;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .chart-grid {
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+                <span>PK10杀号助手</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">历史数据</a></li>
+                    <li><a href="#">杀号技巧</a></li>
+                    <li><a href="#">走势图</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-outline">登录</button>
+                <button class="btn btn-primary">免费查询</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>PK10杀号数据辅助工具</h1>
+            <p>提供精准的历史开奖数据查询、冷热号分析及杀号推荐。数据仅供参考，请理性对待。</p>
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <button class="btn" style="background: white; color: var(--primary-color);">立即查看最新走势</button>
+                <button class="btn" style="background: rgba(255,255,255,0.2); color: white; border: 1px solid rgba(255,255,255,0.4);">查看历史记录</button>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-bar">
+            <div class="stat-card">
+                <div class="stat-number">10,842</div>
+                <div class="stat-label">历史开奖数据</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">数据更新频率</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">杀号算法模型</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">24h</div>
+                <div class="stat-label">实时数据监控</div>
+            </div>
+        </section>
+
+        <!-- Chart Section -->
+        <section class="chart-section">
+            <div class="section-header">
+                <h2 class="section-title">最新开奖号码走势</h2>
+                <div>
+                    <select style="padding: 0.4rem; border-radius: 4px; border: 1px solid var(--border-color);">
+                        <option>2023年10月</option>
+                        <option>2023年9月</option>
+                        <option>2023年8月</option>
+                    </select>
+                </div>
+            </div>
+            <div class="chart-grid" id="chartGrid">
+                <!-- JS will populate this -->
+            </div>
+            <div style="display: flex; justify-content: center; gap: 1.5rem; font-size: 0.85rem; color: var(--text-sub);">
+                <span style="display: flex; align-items: center; gap: 0.3rem;"><span style="width: 10px; height: 10px; background: var(--accent-color); border-radius: 2px;"></span> 本期号码</span>
+                <span style="display: flex; align-items: center; gap: 0.3rem;"><span style="width: 10px; height: 10px; background: var(--secondary-color); border-radius: 2px;"></span> 历史号码</span>
+                <span style="display: flex; align-items: center; gap: 0.3rem;"><span style="width: 10px; height: 10px; background: #e2e8f0; border-radius: 2px;"></span> 非杀号</span>
+            </div>
+        </section>
+
+        <!-- Analysis & Tips -->
+        <section class="analysis-grid">
+            <article class="analysis-card">
+                <div class="card-image">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                </div>
+                <div class="card-content">
+                    <span class="card-tag">冷热分析</span>
+                    <h3 class="card-title">近期冷号回补趋势</h3>
+                    <p class="card-text">分析近期数据中长时间未出现的号码，探讨其回补的可能性与概率分布。</p>
+                    <div class="card-footer">
+                        <span>阅读 2.3k</span>
+                        <span>2023-10-24</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="analysis-card">
+                <div class="card-image">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                </div>
+                <div class="card-content">
+                    <span class="card-tag">杀号技巧</span>
+                    <h3 class="card-title">如何利用奇偶比杀号</h3>
+                    <p class="card-text">讲解奇偶比例在PK10中的常见规律，通过排除法缩小选号范围。</p>
+                    <div class="card-footer">
+                        <span>阅读 1.8k</span>
+                        <span>2023-10-22</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="analysis-card">
+                <div class="card-image">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                </div>
+                <div class="card-content">
+                    <span class="card-tag">大小走势</span>
+                    <h3 class="card-title">大小号交替规律解析</h3>
+                    <p class="card-text">深入研究大小号（1-5为小，6-10为大）的连续出现与间隔规律。</p>
+                    <div class="card-footer">
+                        <span>阅读 1.5k</span>
+                        <span>2023-10-20</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Usage Guide -->
+        <section class="guide-section">
+            <div class="section-header">
+                <h2 class="section-title">杀号工具使用指南</h2>
+            </div>
+            <div class="guide-steps">
+                <div class="guide-step">
+                    <h3>第一步：查询历史数据</h3>
+                    <p>在首页点击“历史数据”或“走势图”栏目，查看最近100期或更多期的开奖号码记录。</p>
+                </div>
+                <div class="guide-step">
+                    <h3>第二步：筛选冷热号码</h3>
+                    <p>使用筛选工具标记出近期出现频率较高或连续未出的号码，这些通常是杀号的重点对象。</p>
+                </div>
+                <div class="guide-step">
+                    <h3>第三步：应用杀号逻辑</h3>
+                    <p>根据奇偶、大小、和值等维度，结合推荐的杀号模型，排除掉极低概率出现的组合。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <p style="font-size: 0.9rem; line-height: 1.6;">本站提供专业的PK10辅助数据分析服务，致力于为用户提供客观、准确的历史数据查询工具。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#">数据首页</a></li>
+                    <li><a href="#">走势图下载</a></li>
+                    <li><a href="#">常见问题</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>相关工具</h4>
+                <ul>
+                    <li><a href="#">PK10走势分析</a></li>
+                    <li><a href="#">历史号码查询</a></li>
+                    <li><a href="#">杀号算法推荐</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="disclaimer">
+            <p>免责声明：本站所有数据仅供娱乐参考，不构成任何投资建议。请理性对待彩票及任何博彩活动，量力而行。</p>
+            <p style="margin-top: 0.5rem;">&copy; 2023 PK10杀号助手 版权所有</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple logic to render the chart grid
+        document.addEventListener('DOMContentLoaded', function() {
+            const chartGrid = document.getElementById('chartGrid');
+            
+            // Generate 10 columns (1-10)
+            for (let i = 1; i <= 10; i++) {
+                const col = document.createElement('div');
+                col.className = 'chart-column';
+                
+                // Simulate active number (randomly pick 3 numbers for demo)
+                const isActive = [3, 7, 9].includes(i);
+                if (isActive) {
+                    col.classList.add('active');
+                } else {
+                    // Add some history styling to others
+                    col.classList.add('history');
+                }
+
+                const num = document.createElement('div');
+                num.className = 'chart-number';
+                num.textContent = i;
+
+                const label = document.createElement('div');
+                label.className = 'chart-label';
+                label.textContent = `01${i}`;
+
+                col.appendChild(num);
+                col.appendChild(label);
+                chartGrid.appendChild(col);
+            }
+        });
+    </script>
+</body>
+  </html>
