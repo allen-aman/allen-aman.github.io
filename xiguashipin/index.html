@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="西瓜视频下载指南：提供西瓜视频视频下载方法、工具推荐及注意事项。了解如何通过浏览器插件或在线工具安全下载西瓜视频，解析视频格式与版权说明。">
+    <meta name="keywords" content="西瓜视频的视频怎么下载,西瓜视频下载,西瓜视频解析,在线视频下载">
+    <title>西瓜视频的视频怎么下载 - 视频下载方法与工具指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff6b00;
+            --primary-hover: #e65c00;
+            --bg-color: #f5f7fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e1e4e8;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 15px;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fff5eb 0%, #ffffff 100%);
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            margin-bottom: 16px;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            color: var(--text-secondary);
+            font-size: 16px;
+            max-width: 600px;
+            margin: 0 auto 24px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            border-color: var(--primary-hover);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+            margin-left: 12px;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--text-main);
+            background-color: #f9f9f9;
+        }
+
+        /* Main Content */
+        main {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 22px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        /* Methods Grid */
+        .methods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .method-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .method-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            background-color: #fff5eb;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            margin-bottom: 16px;
+            font-size: 24px;
+        }
+
+        .method-card h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .method-card p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .step-list {
+            counter-reset: step;
+        }
+
+        .step-item {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 12px;
+            font-size: 14px;
+            color: var(--text-main);
+        }
+
+        .step-item::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            font-size: 12px;
+            line-height: 18px;
+            text-align: center;
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background-color: #fff8f0;
+            border: 1px solid #ffe0b2;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 40px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .warning-icon {
+            color: #ff9800;
+            flex-shrink: 0;
+        }
+
+        .warning-content h4 {
+            color: #e65100;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .warning-content p {
+            color: #6d4c41;
+            font-size: 14px;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 20px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 20px;
+            color: var(--text-secondary);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.6;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 12px 0;
+            }
+            
+            nav ul {
+                margin-top: 12px;
+                gap: 16px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 24px;
+            }
+
+            .warning-box {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+                <span>西瓜视频助手</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">下载指南</a></li>
+                    <li><a href="#methods">常用工具</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>西瓜视频的视频怎么下载？</h1>
+            <p>本指南为您提供多种在电脑和手机端安全下载西瓜视频的方法，支持高清格式保存。</p>
+            <div class="hero-actions">
+                <a href="#methods" class="btn btn-primary">查看下载方法</a>
+                <a href="#faq" class="btn btn-outline">常见问题解答</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- 安全提示 -->
+        <div class="warning-box" id="about">
+            <div class="warning-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            </div>
+            <div class="warning-content">
+                <h4>版权与使用声明</h4>
+                <p>下载西瓜视频内容时，请务必遵守《信息网络传播权保护条例》。请勿下载用于商业用途或未经授权的分发传播。本指南仅提供技术操作演示，请尊重创作者版权。</p>
+            </div>
+        </div>
+
+        <!-- 核心方法 -->
+        <section id="methods">
+            <h2 class="section-title">三种主流下载方式</h2>
+            <div class="methods-grid">
+                
+                <!-- 方法一：浏览器插件 -->
+                <article class="method-card">
+                    <div class="card-icon">🛠️</div>
+                    <h3>浏览器插件安装法</h3>
+                    <p>适合经常在电脑端观看的用户。安装后直接在视频页面点击按钮即可下载。</p>
+                    <ul class="step-list">
+                        <li class="step-item">在 Chrome 或 Edge 浏览器扩展商店搜索“视频下载器”。</li>
+                        <li class="step-item">安装如“1DM+”、“Video DownloadHelper”等插件。</li>
+                        <li class="step-item">打开西瓜视频播放页面，点击插件图标。</li>
+                        <li class="step-item">选择 MP4 格式与分辨率进行保存。</li>
+                    </ul>
+                </article>
+
+                <!-- 方法二：在线解析网站 -->
+                <article class="method-card">
+                    <div class="card-icon">🌐</div>
+                    <h3>在线视频解析网站</h3>
+                    <p>无需安装软件，通过网页输入链接即可获取视频资源，操作简单快捷。</p>
+                    <ul class="step-list">
+                        <li class="step-item">复制西瓜视频网页的播放链接地址。</li>
+                        <li class="step-item">访问支持西瓜视频解析的第三方网站。</li>
+                        <li class="step-item">将链接粘贴到输入框中，点击“开始解析”。</li>
+                        <li class="step-item">等待解析完成，点击下载按钮保存视频。</li>
+                    </ul>
+                </article>
+
+                <!-- 方法三：手机录屏/录屏 -->
+                <article class="method-card">
+                    <div class="card-icon">📱</div>
+                    <h3>手机自带录屏功能</h3>
+                    <p>最简单且无需联网的方法，适合下载短小的短视频片段。</p>
+                    <ul class="step-list">
+                        <li class="step-item">在手机设置中开启“屏幕录制”权限。</li>
+                        <li class="step-item">进入西瓜视频 APP，播放目标视频。</li>
+                        <li class="step-item">从手机屏幕顶部下滑控制中心，点击开始录屏。</li>
+                        <li class="step-item">视频播放结束后，在相册中找到录制的视频文件。</li>
+                    </ul>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- 常见问题 -->
+        <section id="faq" class="faq-section">
+            <h2 class="section-title">常见问题解答</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">下载后的视频为什么无法播放？</div>
+                <div class="faq-answer">
+                    可能是视频源文件格式不兼容，或者解析过程中出现了转码错误。建议尝试更换浏览器插件或解析网站，确保下载的是 MP4 格式的视频文件。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">下载西瓜视频会侵权吗？</div>
+                <div class="faq-answer">
+                    视频下载属于个人学习、研究或欣赏的合理使用范畴。但如果下载的视频用于二次创作、商业宣传或大规模传播，则可能涉及版权侵权风险，请务必注意。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">如何下载高清（4K）视频？</div>
+                <div class="faq-answer">
+                    高清视频的下载通常取决于视频源本身的质量以及解析工具的支持。部分高级插件支持选择最高画质，但部分第三方网站可能只提供标准清晰度（720P或480P）。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">安卓手机下载需要 root 权限吗？</div>
+                <div class="faq-answer">
+                    使用常规的在线解析网站或浏览器插件通常不需要 Root 权限。但如果需要使用更高级的软件（如某些专用下载器），可能需要开启 USB 调试或 Root 权限。
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于本站</h4>
+                    <p style="font-size: 14px; line-height: 1.8;">本站提供各类视频下载技术与工具的介绍与说明，致力于帮助用户解决视频获取难题。所有内容仅供参考。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">西瓜视频官网</a></li>
+                        <li><a href="#">版权保护中心</a></li>
+                        <li><a href="#">帮助中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>法律声明</h4>
+                    <ul>
+                        <li><a href="#">用户协议</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">免责声明</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 西瓜视频下载指南. All Rights Reserved. 本站内容仅供技术交流使用.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ 手风琴交互逻辑
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他已打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
