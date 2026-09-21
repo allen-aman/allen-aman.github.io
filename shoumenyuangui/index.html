@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>守门员规则 - 足球守门员技术规范与执法标准详解</title>
+    <meta name="description" content="本站提供全面的足球守门员规则解析，涵盖禁区内的执法界限、手球判罚标准、越位规则在守门员身上的应用、禁区线规则及常见争议判罚指南。">
+    <meta name="keywords" content="守门员规则, 足球规则, 手球判罚, 禁区规则, 越位, 裁判法典">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --field-green: #27ae60;
+            --field-line: #ecf0f1;
+            --text-dark: #333;
+            --text-light: #666;
+            --bg-light: #f8f9fa;
+            --card-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--field-green);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 1;
+            color: var(--field-green);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Main Content */
+        main {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Rule Cards Grid */
+        .rules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .rule-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
+            border-top: 4px solid var(--field-green);
+            transition: transform 0.3s ease;
+        }
+
+        .rule-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--field-green);
+        }
+
+        .card-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .card-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 10px;
+            background-color: var(--bg-light);
+            color: var(--primary-color);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Visual Diagram Area */
+        .diagram-section {
+            background-color: var(--bg-light);
+            padding: 50px 0;
+            margin: 40px 0;
+            border-radius: 10px;
+        }
+
+        .diagram-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .diagram-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+            flex: 1;
+            min-width: 280px;
+            max-width: 400px;
+        }
+
+        .diagram-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .field-drawing {
+            background-color: var(--field-green);
+            height: 300px;
+            position: relative;
+            border-radius: 4px;
+            border: 2px solid white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* CSS Drawing of Penalty Area */
+        .penalty-area {
+            position: absolute;
+            border: 2px solid white;
+        }
+        .left-area { left: 0; top: 50%; transform: translateY(-50%); width: 165px; height: 400px; }
+        .right-area { right: 0; top: 50%; transform: translateY(-50%); width: 165px; height: 400px; }
+        .goal-area { left: 50%; top: 50%; transform: translate(-50%, -50%); width: 40px; height: 180px; border: 2px solid white; }
+        .goal { width: 100%; height: 10px; background: #bdc3c7; border: 1px solid #7f8c8d; position: absolute; top: 50%; transform: translateY(-50%); z-index: 2;}
+        .goal-net { width: 100%; height: 80px; background: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(255,255,255,0.3) 5px, rgba(255,255,255,0.3) 10px); position: absolute; top: 50%; transform: translateY(-50%); z-index: 1; opacity: 0.5;}
+        .keeper-spot { width: 10px; height: 10px; background: white; border-radius: 50%; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 3; }
+        .penalty-spot { width: 6px; height: 6px; background: white; border-radius: 50%; position: absolute; left: calc(50% + 110px); top: 50%; transform: translateY(-50%); z-index: 3; }
+
+        .diagram-legend {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin-bottom: 60px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--primary-color);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            display: none;
+            padding-left: 20px;
+            border-left: 3px solid var(--field-green);
+            margin-left: 5px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+            color: #95a5a6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .header-inner {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .diagram-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <span>⚽</span> 守门员规则网
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#handball">手球判罚</a></li>
+                    <li><a href="#offside">越位规则</a></li>
+                    <li><a href="#penalty">禁区规则</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>守门员规则</h1>
+            <p>掌握禁区内的执法界限、手球判罚标准与越位应用，做最懂规则的守门员。</p>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <section class="rules-grid">
+            <article class="rule-card" id="handball">
+                <div class="card-content">
+                    <div class="card-icon">🤚</div>
+                    <h3>手球规则详解</h3>
+                    <p>守门员在己方禁区内是否可以手触球？如何区分故意手球与意外手球？本节详细解析《足球竞赛规则》中关于守门员手球判罚的核心条款。</p>
+                    <span class="tag">规则条款 12.1</span>
+                </div>
+            </article>
+
+            <article class="rule-card" id="offside">
+                <div class="card-content">
+                    <div class="card-icon">🚩</div>
+                    <h3>守门员越位</h3>
+                    <p>守门员参与进攻时是否受越位限制？当守门员回撤至己方半场，队友传球时守门员是否处于越位位置？这里有清晰的判定逻辑。</p>
+                    <span class="tag">规则条款 11</span>
+                </div>
+            </article>
+
+            <article class="rule-card" id="penalty">
+                <div class="card-content">
+                    <div class="card-icon">🥅</div>
+                    <h3>禁区线规则</h3>
+                    <p>守门员可以在禁区外用手接球吗？在何种情况下守门员会被红牌罚下？关于禁区内的犯规与界限，裁判法典有明确规定。</p>
+                    <span class="tag">禁区范围</span>
+                </div>
+            </article>
+        </section>
+
+        <section class="diagram-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>禁区与罚球点示意图</h2>
+                </div>
+                <div class="diagram-container">
+                    <div class="diagram-item">
+                        <div class="diagram-title">标准罚球区布局</div>
+                        <div class="field-drawing">
+                            <div class="goal-net"></div>
+                            <div class="goal"></div>
+                            <div class="penalty-area left-area"></div>
+                            <div class="penalty-area right-area"></div>
+                            <div class="goal-area"></div>
+                            <div class="keeper-spot"></div>
+                            <div class="penalty-spot"></div>
+                        </div>
+                        <div class="diagram-legend">
+                            <div class="legend-item"><span class="dot" style="background:white"></span> 罚球点</div>
+                            <div class="legend-item"><span class="dot" style="background:white"></span> 守门员站位点</div>
+                            <div class="legend-item"><span class="dot" style="border:1px solid white"></span> 小禁区</div>
+                            <div class="legend-item"><span class="dot" style="border:1px solid white"></span> 大禁区</div>
+                        </div>
+                    </div>
+                    <div class="diagram-item">
+                        <div class="diagram-title">关键数据</div>
+                        <ul style="margin-top: 10px; color: var(--text-light);">
+                            <li style="margin-bottom: 10px;"><strong>大禁区宽度：</strong> 40.32米</li>
+                            <li style="margin-bottom: 10px;"><strong>大禁区长度：</strong> 16.5米</li>
+                            <li style="margin-bottom: 10px;"><strong>罚球点距离：</strong> 11米</li>
+                            <li style="margin-bottom: 10px;"><strong>罚球区宽度：</strong> 18.32米</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section" id="faq">
+            <div class="section-title">
+                <h2>常见问题解答</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">守门员在己方禁区内手触球算犯规吗？</div>
+                    <div class="faq-answer">
+                        <p>通常情况下，守门员在己方禁区内用手触球是被允许的，前提是接球行为合理且不违反其他规则（如故意拖延时间）。如果守门员在禁区内以外用手触球，则属于犯规。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">守门员参与进攻时会被判越位吗？</div>
+                    <div class="faq-answer">
+                        <p>会被判越位。只要守门员处于对方半场，且在队友传球瞬间比倒数第二名防守球员更接近对方底线，即构成越位。但如果守门员回撤至己方半场，则不再受越位限制。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">守门员用手接回传球时需要注意什么？</div>
+                    <div class="faq-answer">
+                        <p>规则规定，守门员不能故意用手接来自队友的踢球（直接或间接）或头顶球。如果守门员在禁区内用手接回传球，裁判通常判罚间接任意球。但在特定战术配合（如“撞墙”二过一）中，只要守门员不是故意拖延时间，裁判可能会宽容处理。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">守门员在禁区内阻挡对方球员犯规吗？</div>
+                    <div class="faq-answer">
+                        <p>是的。无论在禁区内还是禁区外，守门员与场上任何球员一样，都受同样的犯规和不正当行为规则约束。在禁区内阻挡对方球员通常会判罚点球，除非阻挡发生在禁区外。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col" style="flex: 2; min-width: 300px;">
+                    <h4>守门员规则网</h4>
+                    <p style="color: #bdc3c7; font-size: 0.9rem; margin-bottom: 20px;">
+                        专注于足球规则科普，特别是守门员位置相关的技术规范与执法标准。为球员、教练及裁判提供权威参考。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#handball">手球判罚</a></li>
+                        <li><a href="#offside">越位规则</a></li>
+                        <li><a href="#penalty">禁区规则</a></li>
+                        <li><a href="#">裁判法典</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>参考来源</h4>
+                    <ul>
+                        <li><a href="#">FIFA Laws of the Game</a></li>
+                        <li><a href="#">中国足协竞赛规则</a></li>
+                        <li><a href="#">国际足球理事会章程</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 守门员规则网. 保留所有权利. 本页面仅供规则科普，具体判罚以现场裁判为准.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的FAQ折叠交互
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他已打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
