@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>春联书法-传统笔墨艺术与新春书写指南</title>
+    <meta name="description" content="本站提供春联书法入门教程、名家作品赏析、传统书写工具选购指南及春节书写习俗文化介绍。">
+    <meta name="keywords" content="春联书法, 春联, 书法, 毛笔字, 春节习俗, 书法教程">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-red: #C23531;
+            --dark-red: #8B0000;
+            --ink-black: #2C2C2C;
+            --paper-cream: #F7F5F0;
+            --gold-accent: #D4AF37;
+            --text-main: #333333;
+            --text-light: #666666;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", serif;
+            background-color: var(--paper-cream);
+            color: var(--text-main);
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .top-bar {
+            background-color: var(--dark-red);
+            color: #fff;
+            font-size: 0.85rem;
+            padding: 0.5rem 0;
+            text-align: center;
+        }
+
+        .nav-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--dark-red);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            font-family: "KaiTi", "STKaiti", serif;
+            font-size: 1.8rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-red);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-red);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://picsum.photos/seed/chunlian_art/1600/900.jpg') center/cover no-repeat;
+            height: 60vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 3rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-family: "KaiTi", "STKaiti", serif;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-red);
+            color: #fff;
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border: 2px solid var(--primary-red);
+        }
+
+        .cta-button:hover {
+            background-color: transparent;
+            color: #fff;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 1.5rem 3rem;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--dark-red);
+            font-family: "KaiTi", "STKaiti", serif;
+            display: inline-block;
+            padding: 0 1rem;
+        }
+
+        .section-title h2::before,
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 50px;
+            height: 1px;
+            background-color: var(--primary-red);
+        }
+
+        .section-title h2::before { left: -60px; }
+        .section-title h2::after { right: -60px; }
+
+        .section-title p {
+            color: var(--text-light);
+            margin-top: 0.5rem;
+        }
+
+        /* Tools Grid */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tool-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+            border-top: 4px solid var(--primary-red);
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tool-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--ink-black);
+        }
+
+        .tool-card h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .tool-card p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Content Layout */
+        .content-split {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .content-split {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Articles */
+        .article-list article {
+            background: #fff;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .article-body {
+            padding: 1.5rem;
+        }
+
+        .article-tag {
+            font-size: 0.8rem;
+            color: var(--primary-red);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .article-body h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: var(--ink-black);
+        }
+
+        .article-body p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            color: var(--dark-red);
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--gold-accent);
+        }
+
+        .sidebar-widget h3 {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+
+        .common-phrases li {
+            margin-bottom: 0.8rem;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 0.5rem;
+        }
+
+        .common-phrases a {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-main);
+        }
+
+        .common-phrases a:hover {
+            color: var(--primary-red);
+        }
+
+        .common-phrases span {
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        /* Form */
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: var(--dark-red);
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #ccc;
+            padding: 3rem 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-red);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Nav Toggle */
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #fff;
+                padding: 1rem;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            nav ul.show {
+                display: flex;
+            }
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="top-bar">传承中华文脉，弘扬书法艺术</div>
+    <div class="nav-container">
+        <a href="#" class="logo"><span>龢</span> 春联书法</a>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#guide">入门指南</a></li>
+                <li><a href="#works">作品赏析</a></li>
+                <li><a href="#phrases">常用对联</a></li>
+                <li><a href="#tools">书写工具</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>挥毫泼墨写春联</h1>
+            <p>感受传统笔墨的韵味，在红纸黑字间寄托新春的美好祝愿。从选纸到落笔，开启您的书法创作之旅。</p>
+            <a href="#guide" class="cta-button">开始学习</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Intro Section -->
+        <section id="guide">
+            <div class="section-title">
+                <h2>春联书写指南</h2>
+                <p>了解春联的起源、格式规范及书写步骤</p>
+            </div>
+            <div class="content-split">
+                <article class="article-list">
+                    <article>
+                        <img src="https://picsum.photos/seed/chunlian_ink/800/400.jpg" alt="春联书写场景" class="article-img">
+                        <div class="article-body">
+                            <span class="article-tag">文化科普</span>
+                            <h3>春联的起源与习俗</h3>
+                            <p>春联，又称“门对”、“春贴”，起源于桃符（周代悬挂在大门两旁的长方形桃木板）。宋代文献中开始出现“春贴纸”一词，明代时，桃符由木板改为纸张，并逐渐演变为现在的春联形式。贴春联不仅是辞旧迎新的仪式，更是中华民族传统文化的重要载体。</p>
+                            <a href="#" class="read-more">阅读更多 &rarr;</a>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="article-body" style="padding-top: 0;">
+                            <span class="article-tag">技巧教程</span>
+                            <h3>春联书写的五步法</h3>
+                            <p>1. <strong>备纸</strong>：选择洒金红宣或万年红，注意裁切平整。2. <strong>研墨</strong>：墨汁不宜过浓，浓墨黑亮但易滞笔，淡墨则容易洇纸。3. <strong>布局</strong>：上联末字通常为仄声（三四声），下联末字为平声（一二声）。4. <strong>落笔</strong>：讲究笔势连贯，藏锋起笔，回锋收笔。5. <strong>落款</strong>：题写时间、作者或祝福语，通常位于上联右侧或下联左侧空白处。</p>
+                            <a href="#" class="read-more">阅读更多 &rarr;</a>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="article-body" style="padding-top: 0;">
+                            <span class="article-tag">注意事项</span>
+                            <h3>书写中的常见误区</h3>
+                            <p>很多初学者容易犯“上下联贴反”的错误，记住口诀：“上联在右下联在左”。此外，横批的方向也应与门的方向一致，字头朝外。书写时切忌心浮气躁，保持心境平和方能写出有神采的作品。</p>
+                            <a href="#" class="read-more">阅读更多 &rarr;</a>
+                        </div>
+                    </article>
+                </article>
+
+                <aside>
+                    <div class="sidebar-widget">
+                        <h3>书写工具推荐</h3>
+                        <p style="margin-bottom: 1rem; font-size: 0.9rem; color: #666;">工欲善其事，必先利其器。</p>
+                        <ul style="font-size: 0.9rem; color: #555;">
+                            <li style="margin-bottom: 0.5rem;"><strong>毛笔：</strong>兼毫或羊毫，大小根据字数而定。</li>
+                            <li style="margin-bottom: 0.5rem;"><strong>宣纸：</strong>生宣吸水性强，适合表现墨色变化。</li>
+                            <li style="margin-bottom: 0.5rem;"><strong>墨汁：</strong>一得阁或红星墨汁，需兑水适量。</li>
+                            <li style="margin-bottom: 0.5rem;"><strong>砚台：</strong>端砚或歙砚，或使用现代墨盘。</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3>每日一字</h3>
+                        <div style="text-align: center; padding: 1rem 0;">
+                            <span style="font-family: 'KaiTi', 'STKaiti'; font-size: 4rem; color: var(--dark-red);">福</span>
+                        </div>
+                        <p style="text-align: center; font-size: 0.9rem;">“福”字是春节最常见的字。倒贴“福”字寓意“福到了”，象征好运降临。</p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Works Gallery -->
+        <section id="works">
+            <div class="section-title">
+                <h2>名家作品赏析</h2>
+                <p>欣赏不同书体风格下的春联之美</p>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <img src="https://picsum.photos/seed/kaishu/400/300.jpg" alt="楷书春联" style="width:100%; height:200px; object-fit:cover; margin-bottom:1rem;">
+                    <h3>楷书春联</h3>
+                    <p>端庄稳重，适合家庭张贴，给人以庄重、安宁之感。推荐字词：家和万事兴、龙腾盛世。</p>
+                </div>
+                <div class="tool-card">
+                    <img src="https://picsum.photos/seed/caoshu/400/300.jpg" alt="草书春联" style="width:100%; height:200px; object-fit:cover; margin-bottom:1rem;">
+                    <h3>草书春联</h3>
+                    <p>笔走龙蛇，气势磅礴，适合追求个性与艺术感的场景。推荐字词：春回大地、紫气东来。</p>
+                </div>
+                <div class="tool-card">
+                    <img src="https://picsum.photos/seed/lishu/400/300.jpg" alt="隶书春联" style="width:100%; height:200px; object-fit:cover; margin-bottom:1rem;">
+                    <h3>隶书春联</h3>
+                    <p>古朴典雅，蚕头燕尾，具有浓厚的文化底蕴。推荐字词：国泰民安、五谷丰登。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Common Phrases -->
+        <section id="phrases">
+            <div class="section-title">
+                <h2>常用春联精选</h2>
+                <p>精选经典与热门春联，助您表达美好祝愿</p>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3>经典通用</h3>
+                    <p style="margin-top:0.5rem; font-size:0.9rem;">上联：一帆风顺年年好<br>下联：万事如意步步高</p>
+                </div>
+                <div class="tool-card">
+                    <h3>迎春纳福</h3>
+                    <p style="margin-top:0.5rem; font-size:0.9rem;">上联：天增岁月人增寿<br>下联：春满乾坤福满门</p>
+                </div>
+                <div class="tool-card">
+                    <h3>龙年特辑</h3>
+                    <p style="margin-top:0.5rem; font-size:0.9rem;">上联：龙腾盛世千家喜<br>下联：春满神州万象新</p>
+                </div>
+                <div class="tool-card">
+                    <h3>家庭和睦</h3>
+                    <p style="margin-top:0.5rem; font-size:0.9rem;">上联：家和万事兴<br>下联：人顺百事吉</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section id="contact">
+            <div class="section-title">
+                <h2>投稿与交流</h2>
+                <p>分享您的书法作品，或寻求创作指导</p>
+            </div>
+            <div class="sidebar-widget" style="border-left: 4px solid var(--primary-red);">
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('感谢您的留言，我们会尽快回复！');">
+                    <label for="name" style="display:block; margin-bottom:0.5rem; font-weight:bold;">您的称呼</label>
+                    <input type="text" id="name" placeholder="请输入姓名" required>
+                    
+                    <label for="email" style="display:block; margin-bottom:0.5rem; font-weight:bold;">电子邮箱</label>
+                    <input type="email" id="email" placeholder="用于回复您的留言" required>
+                    
+                    <label for="message" style="display:block; margin-bottom:0.5rem; font-weight:bold;">留言内容</label>
+                    <textarea id="message" rows="5" placeholder="请输入您想说的话..." required></textarea>
+                    
+                    <button type="submit">提交留言</button>
+                </form>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-col">
+            <h4>关于春联书法</h4>
+            <p style="font-size: 0.9rem; line-height: 1.6;">致力于推广中国传统文化，提供专业的春联书写指南、工具介绍及作品展示平台，让更多人了解并喜爱这门传统艺术。</p>
+        </div>
+        <div class="footer-col">
+            <h4>快速链接</h4>
+            <ul>
+                <li><a href="#guide">书写教程</a></li>
+                <li><a href="#works">作品赏析</a></li>
+                <li><a href="#phrases">对联大全</a></li>
+                <li><a href="#tools">工具选购</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>联系方式</h4>
+            <ul>
+                <li>邮箱：contact@chunlian-art.com</li>
+                <li>电话：010-12345678</li>
+                <li>地址：中国·某市文化路88号</li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; 2023 春联书法艺术网 版权所有
+    </div>
+</footer>
+
+<script>
+    function toggleMenu() {
+        var navList = document.getElementById('nav-list');
+        navList.classList.toggle('show');
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            var target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu if open
+                document.getElementById('nav-list').classList.remove('show');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
